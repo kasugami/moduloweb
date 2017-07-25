@@ -1,4 +1,0 @@
-com\jcsc\apps\persistence\App.class
-com\jcsc\apps\persistence\dao\UserDAO.class
-com\jcsc\apps\persistence\beans\User.class
-com\jcsc\apps\persistence\dao\UserDAOImpl.class
