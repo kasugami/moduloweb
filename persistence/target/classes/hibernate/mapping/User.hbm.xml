@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="com.jcsc.apps.persistence.beans.User" table="TC_USERS" >
+      <id column="US_USERNAME" name="nick" type="string"/>
+
+      <property column="US_PASSWORD" name="password" />
+      <property column="US_PROFILE" name="profile" />
+
+   </class>
+</hibernate-mapping>
