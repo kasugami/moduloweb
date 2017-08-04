@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inicio de sesi&oacute;n</title>
+</head>
+<body>
+<div>
+	<div>
+		<div class="container">
+			<div class="panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title" align="center">Inicio de Sesion</h3>
+				</div>
+				<br>
+				<br>
+				<div class="panel-body">
+					<form class="form-horizontal" name="loginViewForm">                        
+						<div class="form-group" data-ng-class="{'has-error': loginViewForm.user.$invalid && submitted}">
+							<label class="col-lg-4 control-label">Usuario:</label>
+							<div class="col-lg-4">
+								<input type="text" maxlength="20" name="user" required
+								    data-ng-model="loginVM.formLogin.user"
+									placeholder="Introduce nombre de usuario." class="form-control" />
+							</div>
+							<span data-ng-show="loginViewForm.user.$error.required && submitted" class="control-label">
+                                Se requiere un nombre de usuario
+                            </span>
+						</div>
+						<div class="form-group" data-ng-class="{ 'has-error': loginViewForm.password.$invalid && submitted}">
+							<label class="col-lg-4 control-label">Contraseña:</label>
+							<div class="col-lg-4">
+								<input type="password" maxlength="20" name="password" required
+								    data-ng-model="loginVM.formLogin.password"
+									placeholder="Introduce contraseña" class="form-control"/>
+							</div>
+							<span data-ng-show="loginViewForm.password.$invalid && submitted" class="control-label">
+                                Se requiere una contraseña valida
+                            </span>
+						</div>
+						<br> <br> <br>
+						<div class="form-group">
+							<div class="col-lg-offset-5 col-lg-6">
+								<button type="button" data-ng-click="loginVM.login()"								    
+								    class="btn btn-primary active">Iniciar sesi&oacute;n</button>
+							</div>							
+						</div>
+						<br>						
+						<br>
+						<div class="form-group">
+                        <div class="col-lg-offset-4 alert alert-danger" style="display: {{loginVM.loginError}};">
+                            <strong>&iexcl;Error!</strong> {{loginVM.errorMsg}}
+                        </div>                        
+                        </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="container">
+			<p class="text-muted credit">
+				Modulo de Evaluacion <br>v0.0.1 <br>Creado por JCSC
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
